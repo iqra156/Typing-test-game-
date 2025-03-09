@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #17a2b8;
+}
+
+.wrapper {
+    width: 770px;
+    background: white;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    padding-top:15px ;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.wrapper h1{
+    padding: 3px 3px 10px 3px;
+}
+.timer-options{
+     padding-bottom: 15px;
+     font-size: larger;
+}
+
+.wrapper .content-box {
+    padding: 13px 20px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.content-box .typing-text {
+    max-height: 255px;
+    overflow-y: auto;
+}
+
+.typing-text::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typing-text p {
+    font-size: 21px;
+    text-align: justify;
+    letter-spacing: 1px;
+    word-break: break-word;
+}
+
+.content button {
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    width: 105px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #17a2b8;
+    transition: transform 0.3s ease;
+}
+
+.content button:active {
+    transform: scale(0.97);
+}
+
+.content-box .content {
+    display: flex;
+    margin-top: 17px;
+    padding: 12px 0;
+    border-top: 1px solid #ccc;
+    justify-content: space-between;
+}
+
+.content .result-details {
+    display: flex;
+    width: calc(100% - 140px);
+    justify-content: space-between;
+}
+
+.result-details li {
+    height: 22px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.result-details li:not(:first-child) {
+    padding-left: 22px;
+    border-left: 1px solid #ccc;
+}
+
+.result-details li p {
+    font-size: 19px;
+}
+
+.result-details li span {
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.result-details li:not(:first-child) span {
+    font-weight: 500;
+}
+
+.result-details li b {
+    font-weight: bold;
+}
+
+#typing-input {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    outline: auto;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#typing-input:focus {
+    border-color: #ccc;
+}
+
+#typing-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+
+
+/* Style for timer selection dropdown */
+.timer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.timer-container label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.timer-container select {
+    padding: 8px 12px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.timer-container select:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Styling for Time's Up message */
+.times-up {
+    display: none;  /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.times-up button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.times-up button:hover {
+    background: #007bff;
+    color: white;
+}
+
